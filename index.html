@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Интенсив</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet"  href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	
+</head>
+<body>
+	<div class="main">
+		<div class="main-overlay">
+		<div class="wrapper">
+			<div class="main-header">
+			  <h1>Стас Кузнецов</h1>
+			  <div class="main-line"></div>
+			  <p>Верстка на HTML и CSS<br>
+				Разработка сайтов на WP
+			  </p>
+			</div>
+			<a class="main-down slowly" href="#down">
+				<i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+		</div>
+		</div>
+		
+	</div>
+	
+	
+	<div class="portfolio-block clearfix" name="down"  id="down">
+		<div class="portfolio"  >
+				<h2>Портфолио</h2>
+			<article class="portfolio-job  xyulo"><img src="img/p1.jpg"><a href="">Кофе - бар</a></article>
+			<article class="portfolio-job"><img src="img/p2.jpg"><a href="">Блог - man</a></article>
+			<article class="portfolio-job"><img src="img/p3.jpg"><a href="">Приключения</a></article>
+		</div>
+	</div>
+<footer>
+	<div class="middle-block footer-flex footer-all">
+			<div class="text">
+				<h2>Stas Kuznetsov</h2>
+				<p>Разработка сайтов <br> 
+					под ключ
+				</p>
+			</div>			
+			<div class="subscribe">	
+					<h2>Подпишитесь</h2>
+				<a href="#"><i class="fa fa-vk" aria-hidden="true"></i></i></a>
+				<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				
+			</div>	
+			<div class="write-me">
+				<form method="get" action="https://vk.com/vk_kstas">
+					<h2>Напишите мне</h2> 
+					<input type="submit" value="Заказать сайт">
+				</form>
+			</div>		
+	</div>
+</footer>
+<!--
+
+			
+
+-->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+      $(document).ready(function() {
+        // навигация - плавный скроллинг к якорю
+        $(".slowly").on("click", function (event) {
+          // отменяем стандартную обработку нажатия по ссылке
+          event.preventDefault();
+          // забираем идентификатор бока с атрибута href
+          var id = $(this).attr('href'),
+          // узнаем высотуот начала страницы до блока на который ссылается якорь
+          top = $(id).offset().top;
+          // анимируем переход на расстояние - top за 1500 мс
+          $('body,html').animate({scrollTop: top}, 800);
+        });
+      });    
+</script>
+</body>
