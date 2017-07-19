@@ -65,7 +65,7 @@ body {
 	background-color:#7f7f7f;
 }
 a, a:visited { /* порядок правил для ссылок имеет значение */
-	color: #e6618c;
+	color: red;
 	text-decoration: underline;
 }
 a:hover {
@@ -95,61 +95,45 @@ img{
 /* --------------- /базовые настройки ---------*/
 
 .main {
-
     width: 100%;  height: 100vh;
     text-align: center;
     color: #fff;
     background: #000 url(img/main-bg.jpg) center center no-repeat;
 	background-size: cover;
-
 }
-
-.main-overlay {
-
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-
-}
+	.main-overlay {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 .wrapper {
 	display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+}.main-header{
 }
+	.main-header h1 {
+		font-size: 3em;
+		text-transform: uppercase;
+		font-weight: 300;
+		padding: 20px 0;
+	}
+	.main-line {
+		width: 200px;
+		height: 1px;
+		background-color: #fff;
+		margin: 0 auto;
+	}
+	.main-header p{
+		font-size:1.875em;
+		padding: 20px 0;
+	}
 
-.main-header{
-}
-
-.main-header h1 {
-    font-size: 3em;
-    text-transform: uppercase;
-    font-weight: 300;
-	padding: 20px 0;
-}
-.main-line {
-    width: 200px;
-    height: 1px;
-    background-color: #fff;
-    margin: 0 auto;
-}
-.main-header p{
-	font-size:1.875em;
-	padding: 20px 0;
-}
-
-
-.main-line {
-  width: 200px;
-  height: 1px;
-  background-color: #fff;
-  margin: 0 auto;
-}
 .main-down {
-    position: absolute;
     color: #fff;
-    z-index: 4;
-    bottom: 2rem;
+	position: absolute;
+    bottom: 2%;
     display: inline-block;
     font-size: 2em;
     width: 35px;
@@ -157,57 +141,67 @@ img{
     border: 1px solid transparent;
     transition: 0.2s;
 }
-.main-down:hover {
-  color: #fff;
-  border-color: #fff;
+.main-down:hover, .main-down:visited  {
+	color: #fff;
+	border-color: #fff;
 }
+
+
+
+/* Портфолио */
 .portfolio-block{
 	background-color:#fff;
 	margin: 0 auto;
-	padding-bottom: 210px;
-}
-.portfolio-block h2{
-	color:rgb(142, 75, 17);
-	font-size:2.25em;
-	padding: 20px 0;
-	text-transform:uppercase;
-	margin-bottom: 100px;
-	text-align: center;
+	padding: 6em 0;
 }
 .portfolio {
     max-width: 1170px;
     margin: 0 auto;
-	margin: 0 auto;
-	padding-top: 80px;
+	padding: 0 10px;
 }
+	.portfolio h2{
+		color:rgb(95, 4, 132);;
+		font-size:2.25em;
+		padding: 20px 0;
+		text-transform:uppercase;
+		margin-bottom: 100px;
+		text-align: center;
+	}
 
-.portfolio-job {
-    width: 31%;
-    float: left;
-    margin-left: 3.5%;
-	text-align:center;
-}
+	.portfolio-job {
+		width: 31%;
+		float: left;
+		margin-left: 3.5%;
+		text-align: center;
+	    margin-bottom: 15px;	
+	}
 
-.xyulo {
-	margin-left: 0;
-}
-.portfolio-job img{
-	box-shadow: 0 0 20px rgba(0,0,0,0.8);
-}
-.portfolio-job a {
-	padding: 10px 0 10px 0;
-	font-size:2em;
-	color:rgb(142, 75, 17);
-}
+	.first-div-pf {
+		margin-left: 0;
+	}
+	.portfolio-job img{
+		box-shadow: 0 0 20px rgba(0,0,0,0.8);
+	    margin-bottom: 10px;	
+	}
+	.portfolio-job a {
+		font-size: 1.6em;
+		color:rgb(95, 4, 132);
+		margin-bottom: 10px;
+		display: block;
+		text-decoration:none;
+	}
 
-.portfolio-job a:hover {
-}
+	.portfolio-job a:hover {
+		text-decoration:underline;
+	}
+
+/* Подвал */
 footer{
 	width:100%;
 	background-color:#646464;
-	padding:50px 0;
+	padding: 20px 0;
 }
-.middle-block{
+.footer-block{
 	max-width:1170px;
 	margin: 0 auto;
 }
@@ -220,6 +214,9 @@ footer{
 .text, .subscribe, .write-me {
     max-width: 360px;
     width: 31%;
+}
+.footer-all div{
+    margin: 25px 0;	
 }
 .footer-all h2{
 	font-size:1.5em;
@@ -238,9 +235,9 @@ footer{
 	padding:10px;
 	color:white;
 }
+.subscribe a:hover{color:#646464; background:#fff;}
 
-
-input[type="submit"] {
+.write-me-submit {
     background-color: #646464;
     border: 1px solid #fff;
     border-radius: 2em;
@@ -249,4 +246,35 @@ input[type="submit"] {
     padding: 5px 10px;
 	width: 200px;
 	cursor: pointer;
+}
+
+.write-me-submit:hover{
+	color:#646464; background:#fff;
+}
+
+
+/* Подвал */
+
+@media screen and (max-width:800px){
+	.portfolio-block{
+		padding: 2em 0;
+	}
+	.portfolio h2{
+	}
+	
+	.first-div-pf {
+		margin-left: 0;
+	}
+	.portfolio-job{
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+	.footer-flex {
+	    flex-direction: column;	
+	}
+	.footer-all div{
+		max-width: none;
+		width:100%;
+	}
 }
